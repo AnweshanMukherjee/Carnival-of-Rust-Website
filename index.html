@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/logos/FAS_Logo.png" />
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+  ></script>
+  <title>Fine Arts Society</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+    body {
+      margin: 0;
+      font-family: 'Staatliches', cursive;
+    }
+
+    .loader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: white;
+      width: 100%;
+      height: 100vh;
+      animation: backgroundChange .5s linear 3s forwards;
+    }
+
+    .load-text {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      font-size: 8vmax;
+      width: fit-content;
+      display: inline;
+      animation: colorChange .5s linear 3s forwards;
+    }
+
+    .loaded-text {
+      transform: scale(1.5);
+      float: left;
+      animation: scaleText .5s linear .5s forwards;
+    }
+
+    .loading-text {
+      width: 0;
+      overflow: hidden;
+      animation: expand 1s linear 1.5s forwards;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 0;
+      box-sizing: border-box;
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    @keyframes scaleText {
+      from {transform: scale(1.5)}
+      to {transform: scale(1)}
+    }
+
+    @keyframes expand {
+      from {width: 0;}
+      to {width: 100%;}
+    }
+
+    @keyframes backgroundChange {
+      from {background-color: white}
+      to {background-color: black}
+    }
+
+    @keyframes colorChange {
+      from {color: black}
+      to {color: white}
+    }
+
+    @keyframes fadeOut {
+      from {opacity: 1}
+      to {
+        opacity: 0; 
+        z-index: -1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="load-text">
+      <div class="loading-text"><font color="#b7410e">F</font>ine</div>
+      <div class="loading-text"><font color="#b7410e">A</font>rts</div>
+      <div class="loading-text"><font color="#b7410e">S</font>ociety</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
